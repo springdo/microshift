@@ -2,7 +2,7 @@
 
 MicroShift (4.13) setup for my small form factor PC using [this blog as the base of my setup](https://medium.com/@ben.swinney_ce/microshift-homelab-ddf57864c1d0)
 
-## Base Setup
+## ⛰️ Base Setup
 
 * using a Lenovo / ThinkCentre M930 or something like that as the base. It's an i5 4th gen with 16 gb of RAM
 * used a RHEL 9.2 instance with a user called microshift and set the hostname to microshift
@@ -21,7 +21,7 @@ sudo dnf -y update
 sudo reboot
 ```
 
-## Setup MicroShift
+## 🪂 Setup MicroShift
 
 0. setup the DNS entries (A Record for the domain name and CN for *.) to point to the homeserver. Allow the comms for `80`, `443` & `6443` throught the router to the box
 
@@ -55,3 +55,6 @@ chmod go-r ~/.kube/config
 6. Verify things are working `oc get pods -A`
 
 7. Do something interesting :)
+
+
+## 🐙 THIS IS GITOPS 🐙
