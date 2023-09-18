@@ -1,4 +1,4 @@
-# 🤏💋 Microshift
+# 🤏💋 MicroShift
 
 MicroShift (4.13) setup for my small form factor PC using [this blog as the base of my setup](https://medium.com/@ben.swinney_ce/microshift-homelab-ddf57864c1d0)
 
@@ -22,9 +22,10 @@ sudo reboot
 ```
 
 ## Setup MicroShift
+
 0. setup the DNS entries (A Record for the domain name and CN for *.) to point to the homeserver. Allow the comms for `80`, `443` & `6443` throught the router to the box
 
-1. setup firewall on teh machine and setup the 
+1. Setup firewall on the machine
 ```bash
 sudo firewall-cmd --permanent --zone=trusted --add-source=10.42.0.0/16
 sudo firewall-cmd --permanent --zone=public --add-port=6443/tcp
@@ -42,7 +43,7 @@ sudo chown root:root /etc/crio/openshift-pull-secret
 sudo chmod 600 /etc/crio/openshift-pull-secret
 ```
 
-4. start microshift `sudo systemctl enable --now microshift.service`
+4. Start microshift `sudo systemctl enable --now microshift.service`
 
 5. Grab Kubeconfig
 ```bash
@@ -51,3 +52,6 @@ sudo cat /var/lib/microshift/resources/kubeadmin/kubeconfig > ~/.kube/config
 chmod go-r ~/.kube/config
 ```
 
+6. Verify things are working `oc get pods -A`
+
+7. Do something interesting :)
