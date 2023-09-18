@@ -11,7 +11,7 @@ spec:
   source:
     path: workloads/toolbox
     repoURL: https://github.com/springdo/microshift.git
-    targetRevision: master
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true

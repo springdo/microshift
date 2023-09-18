@@ -1,6 +1,6 @@
 # 🤏💋 MicroShift
 
-MicroShift (4.13) setup for my small form factor PC using [this blog as the base of my setup](https://medium.com/@ben.swinney_ce/microshift-homelab-ddf57864c1d0)
+MicroShift ([4.13](https://access.redhat.com/documentation/en-us/red_hat_build_of_microshift/4.13)) setup for my small form factor PC using [this blog as the base of my setup](https://medium.com/@ben.swinney_ce/microshift-homelab-ddf57864c1d0)
 
 ## ⛰️ Base Setup
 
@@ -58,3 +58,11 @@ chmod go-r ~/.kube/config
 
 
 ## 🐙 THIS IS GITOPS 🐙
+
+TODO - add ARGOCD STUFF
+
+
+
+## Next to come 
+* adding my flower sensors
+* proper SSL Certs :)
