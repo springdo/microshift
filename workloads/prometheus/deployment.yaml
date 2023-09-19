@@ -4,10 +4,11 @@ kind: Deployment
 metadata:
   name: miflora-prometheus
 spec:
+  replicas: 1
+  revisionHistoryLimit: 10
   selector:
     matchLabels:
       deployment: miflora-prometheus
-  replicas: 1
   strategy:
     type: Recreate
   template:
@@ -17,31 +18,32 @@ spec:
     spec:
       containers:
       - name: prometheus
+        image: quay.io/prometheus/prometheus
         imagePullPolicy: Always
-        image: "quay.io/prometheus/prometheus"
         args:
-            - --config.file=/etc/prometheus/prometheus.yml
-            - --web.config.file=/etc/prometheus/web-config.yml
+        - --config.file=/etc/prometheus/prometheus.yml
+        - --web.config.file=/etc/prometheus/web-config.yml
         ports:
         - containerPort: 9090
           protocol: TCP
         resources: {}
-        # readinessProbe:
-          # httpGet:
-          #   path: /
-          #   port: 9090
-          # initialDelaySeconds: 10
-          # timeoutSeconds: 1
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
         volumeMounts:
-          - mountPath: "/etc/prometheus/"
-            name: "miflora-prometheus-config" 
-          - mountPath: "/prometheus"
-            name: "miflora-prometheus-data" 
+        - mountPath: /etc/prometheus/
+          name: miflora-prometheus-config
+        - mountPath: /prometheus
+          name: miflora-prometheus-data
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
       volumes:
-      - name: "miflora-prometheus-config"
-        configMap:
-          name: "miflora-prometheus"
+      - configMap:
           defaultMode: 420
-      - name: "miflora-prometheus-data" 
+          name: miflora-prometheus
+        name: miflora-prometheus-config
+      - name: miflora-prometheus-data
         persistentVolumeClaim:
           claimName: prometheus-pvc
