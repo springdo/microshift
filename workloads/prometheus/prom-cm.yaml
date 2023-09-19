@@ -71,18 +71,21 @@ data:
           - targets: ['192.168.86.34:6020']
             labels: 
               instance: babyroom
+              sensor: E
       - job_name: small_rubber_tree
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.34:6021']
             labels: 
               instance: babyroom
+              sensor: F
       - job_name: pink_rubber
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.34:6022']
             labels:
               instance: babyroom
+              sensor: H
       # - job_name: aralia_fabian
       #   metrics_path: '/'
       #   static_configs:
