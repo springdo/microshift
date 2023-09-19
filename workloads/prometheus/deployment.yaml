@@ -13,6 +13,8 @@ spec:
       labels:
         deployment: miflora-prometheus
     spec:
+      strategy:
+        type: Recreate
       containers:
       - name: prometheus
         imagePullPolicy: Always
