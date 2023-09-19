@@ -1,3 +1,4 @@
 resources:
   - apps/console.yaml
   - apps/toolbox.yaml
+  - apps/prometheus.yaml

@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: miflora-prometheus
+spec:
+  ports:
+    - port: 9090
+      protocol: TCP
+      targetPort: 9090
+      name: 9090-tcp
+  selector:
+    deployment: miflora-prometheus
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

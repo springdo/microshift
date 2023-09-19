@@ -1,0 +1,45 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miflora-prometheus
+spec:
+  selector:
+    matchLabels:
+      deployment: miflora-prometheus
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        deployment: miflora-prometheus
+    spec:
+      containers:
+      - name: prometheus
+        imagePullPolicy: Always
+        image: "quay.io/prometheus/prometheus"
+        args:
+            - --config.file=/etc/prometheus/prometheus.yml
+            - --web.config.file=/etc/prometheus/web-config.yml
+        ports:
+        - containerPort: 9090
+          protocol: TCP
+        resources: {}
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 9090
+          initialDelaySeconds: 10
+          timeoutSeconds: 1
+        volumeMounts:
+          - mountPath: "/etc/prometheus/"
+            name: "miflora-prometheus-config" 
+          - mountPath: "/prometheus"
+            name: "miflora-prometheus-data" 
+      volumes:
+      - name: "miflora-prometheus-config"
+        configMap:
+          name: "miflora-prometheus"
+          defaultMode: 420
+      - name: "miflora-prometheus-data" 
+        persistentVolumeClaim:
+          claimName: prometheus-pvc
