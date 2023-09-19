@@ -27,24 +27,28 @@ data:
           - targets: ['192.168.86.30:6000']
             labels: 
               instance: living_room
+              sensor: B
       - job_name: rubber_tree
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.30:6001']
             labels: 
               instance: living_room
+              sensor: C
       - job_name: japanese_bamboo
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.30:6002']
             labels: 
               instance: living_room
+              sensor: D
       - job_name: sideshow_bob
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.30:6003']
             labels: 
               instance: living_room
+              sensor: G
 
       # Bedroom 
       - job_name: cheese_plant
