@@ -4,7 +4,6 @@ metadata:
   name: certs
 spec:
   destination:
-    name: 'cert-man'
     namespace: cert-manager
     server: 'https://kubernetes.default.svc'
   source:
