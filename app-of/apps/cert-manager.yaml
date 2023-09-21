@@ -17,6 +17,7 @@ spec:
       values: |-
         prometheus:
           enabled: false
+        installCRDs: true
   sources: []
   project: default
   syncPolicy:
