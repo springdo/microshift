@@ -2,3 +2,4 @@ resources:
   - apps/console.yaml
   - apps/toolbox.yaml
   - apps/prometheus.yaml
+  - apps/cert-manager.yaml
