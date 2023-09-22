@@ -104,7 +104,7 @@ metadata:
   name: openshift-console
   namespace: kube-system
 spec:
-  host: console.microshift.petbattle.app
+  host: console.microshift.is-in-the.cloud
   to:
     kind: Service
     name: openshift-console-service

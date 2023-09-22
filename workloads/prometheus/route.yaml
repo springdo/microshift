@@ -3,7 +3,7 @@ kind: Route
 metadata:
   name: miflora-prometheus
 spec:
-  host: prometheus.microshift.petbattle.app
+  host: prometheus.microshift.is-in-the.cloud
   port:
     targetPort: 9090
   tls:

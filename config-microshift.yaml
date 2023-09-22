@@ -1,6 +1,6 @@
 # to be placed in /etc/microshift/config.yaml
 dns:
-  baseDomain: microshift.petbattle.app
+  baseDomain: microshift.is-in-the.cloud
 network:
   clusterNetwork:
     - cidr: 10.42.0.0/16
