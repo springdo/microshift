@@ -16443,7 +16443,7 @@ spec:
             configMapKeyRef:
               key: server.insecure
               name: argocd-cmd-params-cm
-              optional: true
+              optional: false
         - name: ARGOCD_SERVER_BASEHREF
           valueFrom:
             configMapKeyRef:
