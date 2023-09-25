@@ -3,3 +3,4 @@ resources:
   - apps/toolbox.yaml
   - apps/prometheus.yaml
   - apps/cert-manager.yaml
+  - apps/grafana.yaml
