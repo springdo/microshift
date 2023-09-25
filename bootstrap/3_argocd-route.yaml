@@ -15,7 +15,7 @@ spec:
     targetPort: https
   tls:
     insecureEdgeTerminationPolicy: Redirect
-    termination: passthrough
+    termination: edge
   to:
     kind: Service
     name: argocd-server
