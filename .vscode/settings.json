@@ -1,5 +1,4 @@
 {
     "yaml.schemas": {
-        "https://json.schemastore.org/prometheus.json": "file:///Users/donal/Documents/education/microshift/microshift/app-of/apps/prometheus.yaml"
     }
 }
