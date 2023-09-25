@@ -1,0 +1,13 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: ingress-letsencrypt-cert
+  namespace: openshift-ingress
+spec:
+  secretName: ingress-letsencrypt-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - '*.apps.microshift.is-in-the.cloud'

@@ -10,7 +10,7 @@ metadata:
   name: argocd-server
   namespace: argocd
 spec:
-  host: microshift-argocd-argocd.apps.microshift.home.swinney.io
+  host: argocd.apps.microshift.is-in-the.cloud
   port:
     targetPort: https
   tls:

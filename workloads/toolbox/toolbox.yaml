@@ -4,7 +4,6 @@ metadata:
   labels:
     app: tools
   name: tools
-  namespace: kube-system
 spec:
   progressDeadlineSeconds: 600
   replicas: 1

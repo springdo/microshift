@@ -1,0 +1,13 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: api-letsencrypt-cert
+  namespace: openshift-config
+spec:
+  secretName: api-letsencrypt-cert
+  issuerRef:
+    name: letsencrypt-production
+    kind: ClusterIssuer
+  dnsNames: 
+    - api.microshift.is-in-the.cloud

@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    namespace: kube-system
+    namespace: rando-bin
     server: https://kubernetes.default.svc
   project: default
   source:
@@ -13,6 +13,8 @@ spec:
     repoURL: https://github.com/springdo/microshift.git
     targetRevision: main
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
