@@ -7,7 +7,7 @@ data:
   web-config.yml: |-
     basic_auth_users:
       microshift: $2y$05$yJw7zBr4OMz0RiDS5Z4UT.tBmCdrLsbGvE9Wtvmw2dAEdyljFfNSy
-
+      grafana:$2y$05$rnmbj3jPZBtM1xv5GnT2WegH7lJIyuL3h.YZ4J/uQWC0IYwjDfI1S
   prometheus.yml: |-
     global:
       scrape_interval:     60s
@@ -20,6 +20,7 @@ data:
       - job_name: prometheus
         static_configs:
           - targets: ['localhost:9090']
+
       # Living Room Scrapes
       - job_name: baldy_ficus 
         metrics_path: '/'
@@ -57,55 +58,59 @@ data:
           - targets: ['192.168.86.29:6011']
             labels: 
               instance: bedroom
-      - job_name: money_tree
-        metrics_path: '/'
-        static_configs:
-          - targets: ['192.168.86.29:6012']
-            labels: 
-              instance: bedroom
+              sensor: K
+      # - job_name: money_tree
+      #   metrics_path: '/'
+      #   static_configs:
+      #     - targets: ['192.168.86.29:6012']
+      #       labels: 
+      #         instance: bedroom
+      #         sensor: 
 
-      # Babyroom 
+      # Babyroom - pi name but kitcken is location
       - job_name: aralia_fabian
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.34:6020']
             labels: 
-              instance: babyroom
+              instance: kitchen
               sensor: E
       - job_name: small_rubber_tree
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.34:6021']
             labels: 
-              instance: babyroom
+              instance: kitchen
               sensor: F
       - job_name: pink_rubber
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.34:6022']
             labels:
-              instance: babyroom
-              sensor: H
+              instance: kitchen
+              sensor: I
       # - job_name: aralia_fabian
       #   metrics_path: '/'
       #   static_configs:
       #     - targets: ['192.168.86.34:6022']
       #       labels: 
-      #         instance: babyroom
+      #         instance: kitchen
 
-      # Spare room
+      # Spareroom - but actually in the hallway
       - job_name: spider_plant
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.39:6030']
             labels: 
-              instance: spareroom
+              instance: hallway
+              sensor: H
       - job_name: begonia
         metrics_path: '/'
         static_configs:
           - targets: ['192.168.86.39:6031']
             labels: 
-              instance: spareroom
+              instance: hallway
+              sensor: J
 
     alerting:
       alertmanagers:
