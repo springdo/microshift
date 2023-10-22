@@ -46,9 +46,15 @@ spec:
               cpu: 250m
               memory: 750Mi
           volumeMounts:
-            - mountPath: /var/lib/grafana
-              name: grafana-pv
+            - name: grafana-pv
+              mountPath: /var/lib/grafana
+            # - name: graf-config
+            #   mountPath: /etc/grafana/provisioning/datasources/datasource.yml
+            #   subPath: datasource.yml
       volumes:
         - name: grafana-pv
           persistentVolumeClaim:
             claimName: grafana-pvc
+        # - name: graf-config
+        #   configMap:
+        #     name: prom-cm
