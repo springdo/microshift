@@ -452,8 +452,6 @@
               }
             },
             "mappings": [],
-            "max": 100,
-            "min": 0,
             "thresholds": {
               "mode": "absolute",
               "steps": [
@@ -490,6 +488,7 @@
             "sort": "none"
           }
         },
+        "pluginVersion": "10.1.2",
         "targets": [
           {
             "datasource": {
@@ -799,6 +798,6 @@
     "timezone": "",
     "title": "🌻 FlowerPower2.0 🌷",
     "uid": "ba98ea57-aea4-4bd3-a5bc-a0ea111d3f08",
-    "version": 11,
+    "version": 13,
     "weekStart": ""
   }
