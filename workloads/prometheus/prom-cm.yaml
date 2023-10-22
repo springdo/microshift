@@ -7,7 +7,7 @@ data:
   web-config.yml: |-
     basic_auth_users:
       microshift: $2y$05$yJw7zBr4OMz0RiDS5Z4UT.tBmCdrLsbGvE9Wtvmw2dAEdyljFfNSy
-      grafana:$2y$05$rnmbj3jPZBtM1xv5GnT2WegH7lJIyuL3h.YZ4J/uQWC0IYwjDfI1S
+      grafana: $2y$05$rnmbj3jPZBtM1xv5GnT2WegH7lJIyuL3h.YZ4J/uQWC0IYwjDfI1S
   prometheus.yml: |-
     global:
       scrape_interval:     60s
