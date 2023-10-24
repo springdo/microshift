@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: alertmanager
-        image: quay.io/alertmanager/alertmanager
+        image: quay.io/prometheus/alertmanager
         imagePullPolicy: Always
         args:
         - --config.file=/etc/alertmanager/alertmanager.yml
