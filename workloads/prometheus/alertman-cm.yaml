@@ -4,7 +4,7 @@ kind: ConfigMap
 metadata:
   name:  alertmanager
 data:
-  prometheus.yml: |-
+  alertmanager.yml: |-
     global:
       # The smarthost and SMTP sender used for mail notifications.
       smtp_smarthost: 'localhost:25'
