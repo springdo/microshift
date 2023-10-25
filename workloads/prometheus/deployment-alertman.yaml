@@ -22,6 +22,7 @@ spec:
         imagePullPolicy: Always
         args:
         - --config.file=/etc/alertmanager/config/alertmanager.yml
+        - --storage.path=/etc/alertmanager/data
         ports:
         - containerPort: 9003
           protocol: TCP
