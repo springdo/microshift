@@ -24,7 +24,7 @@ spec:
         - --config.file=/etc/alertmanager/alertmanager.yml
         - --storage.path=/tmp/data
         ports:
-        - containerPort: 9003
+        - containerPort: 9093
           protocol: TCP
         resources: {}
         terminationMessagePath: /dev/termination-log

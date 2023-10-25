@@ -5,10 +5,10 @@ metadata:
   name: alertmanager
 spec:
   ports:
-    - port: 9003
+    - port: 9093
       protocol: TCP
-      targetPort: 9003
-      name: 9003-tcp
+      targetPort: 9093
+      name: 9093-tcp
   selector:
     deployment: alertmanager
   sessionAffinity: None

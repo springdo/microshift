@@ -5,7 +5,7 @@ metadata:
 spec:
   host: alertmanager.apps.microshift.is-in-the.cloud
   port:
-    targetPort: 9003
+    targetPort: 9093
   tls:
     termination: edge
   to:
