@@ -123,7 +123,7 @@ data:
     - name: moisture.rules
       rules:
       - alert: DryPlants
-        expr: miflora_primary{resource_type="moisture"} < 20
+        expr: miflora_primary{resource_type="moisture"} < 10
         annotations:
           DESCRIPTION: '{{$labels.job}} dry plant'
           SUMMARY: '{{$labels.job}} in {{$labels.instance}} needs to be watered'
