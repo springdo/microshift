@@ -56,4 +56,4 @@ data:
       - name: default-receiver
       - name: webhook
         webhook_configs:
-          - url: "http://my-plant-power/sendalert"
+          - url: "http://be-plant-server/sendalert"
