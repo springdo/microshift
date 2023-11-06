@@ -10,8 +10,8 @@ data:
       grafana: $2y$05$rnmbj3jPZBtM1xv5GnT2WegH7lJIyuL3h.YZ4J/uQWC0IYwjDfI1S
   prometheus.yml: |-
     global:
-      scrape_interval:     60s
-      evaluation_interval: 15s
+      scrape_interval:     3600s
+      evaluation_interval: 3600s
 
     rule_files:
       - moisture.rules
